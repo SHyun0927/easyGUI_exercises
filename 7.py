@@ -21,9 +21,8 @@ def spelling_convertor():
                 us_word = "--"
                 easygui.msgbox("There are no nz word detected.")
 
-        easygui.buttonbox(f"The American spelling for {nz_word} is {us_word}. \n"
-                          f"Do you want to convert another word?", choices=["Yes", "No"])
-        restart = easygui.buttonbox()
+        restart = easygui.buttonbox(f"The American spelling for {nz_word} is {us_word}. \n"
+                                    f"Do you want to convert another word?", choices=["Yes", "No"])
 
         if restart == "No":
             break
