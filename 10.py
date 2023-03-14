@@ -36,9 +36,8 @@ def main():
     # while True loop를 사용하여 유저가 다시 플레이하길 원할 떄 무한적으로 반복할 수 있게 한다
     while True:
         # 주사위를 굴린다
-
         dice = dice_roll()
-        # 이 부분은 유저가 주사위를 3번 다시 굴릴 수 있게 해 준다.
+        # 이 부분은 유저가 주사위를 3(range loop에서 두번)번 다시 굴릴 수 있게 해 준다.
         for i in range(2):
             # 여기는 버튼박스를 활용하여 다시 굴릴지, 선택지에 그대로 있을지 선택한다.
             again = easygui.buttonbox(f"You rolled: {dice} \n"
