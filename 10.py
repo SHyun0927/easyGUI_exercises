@@ -26,7 +26,9 @@ def detect_result(dice):
 
     # 만약 같은 숫자가 2개 혹은 존재하지 않는다면 이 문구를 표시한다.
     else:
-        return "Better luck next time..." 
+        return "Better luck next time..."
+
+# 정보) 사실 더 깔끔하게 만들수 있는 방법이 있다. 일단 이해하기 쉬우라고.
 
 
 # 코드를 전부 잇는 메인루틴 function
