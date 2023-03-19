@@ -8,15 +8,15 @@ def dice_roll():
 
 
 def detect_result(dice):
-    counts = [dice.count(i) for i in dice]
+    find_number = [dice.count(i) for i in dice]
 
-    if 5 in counts:
+    if 5 in find_number:
         return "Yahtzee!!", 50
 
-    if 4 in counts:
+    if 4 in find_number:
         return "Four of a kind!", 30
 
-    if 3 in counts:
+    if 3 in find_number:
         return "Three of a kind!", 10
 
     else:
@@ -27,7 +27,7 @@ def play_game(player):
     dice = dice_roll()
 
     for i in range(2):
-        again = easygui.buttonbox(f"{player}, you rolled: {dice} \n"
+        again = easygui.buttonbox(f"{player}'s roll is: {dice} \n"
                                   f"Choose: ", "Rolling...", choices=["Reroll", "Stick"])
 
         if again == "Reroll":
@@ -37,7 +37,7 @@ def play_game(player):
             break
 
     result, score = detect_result(dice)
-    easygui.msgbox(f"{player}, your final roll is: {dice} \n"
+    easygui.msgbox(f"{player}'s your final roll is: {dice} \n"
                    f"{result}\n"
                    f"You scored {score} points!", "Result!")
     return score
@@ -61,7 +61,7 @@ def main():
             easygui.msgbox(f"{player2} wins with {score2} points!", "Player 2 wins!")
 
         else:
-            easygui.msgbox("It's a tie!", "Tie!")
+            easygui.msgbox("It's a draw!", "Draw...")
 
         restart = easygui.buttonbox("You've finished the game. Do you want to play again?", "Try?", choices=["Yes", "No"])
 
